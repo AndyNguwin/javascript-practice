@@ -7,7 +7,19 @@
  * @example "abcdef" -> "ABCdef"
 */
 function problem(str) {
-    return null;
+    let mid = 0;
+    let count = 0;
+    let result = "";
+    if (str.length % 2 === 0){ mid = str.length/2; } 
+    else { mid = (str.length - 1)/2 }
+    
+    for (const letter of str){
+        if (count < mid){ result += letter.toUpperCase(); } 
+        else { result += letter.toLowerCase(); }
+        count++;
+    }
+
+    return result;
 }
 
 const tests = [
