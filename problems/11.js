@@ -8,7 +8,13 @@
  * @example "racecar" -> true
 */
 function problem(str) {
-    return null;
+    let arr = str.toLowerCase().split(" ").join("").split("");
+
+    for (let x = 0; x < arr.length; x++){
+        if (arr[x] != arr[arr.length - 1 - x]) { return false; }
+    }
+    return true;
+    
 }
 
 const tests = [
