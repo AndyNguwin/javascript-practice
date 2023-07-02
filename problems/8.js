@@ -7,7 +7,9 @@
  * @example [1, 2, 3] -> 6
 */
 function problem(numbers) {
-    return null;
+    return numbers.reduce((avg, number, idx) => {
+        return ((avg * idx) + number) / (idx + 1);
+    }, 0);
 }
 
 const tests = [
